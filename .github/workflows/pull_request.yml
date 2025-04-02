@@ -1,10 +1,10 @@
-name: Test Storybook with SmartUI
+name: Visual regression check with SmartUI
 
 on:
   push:
-    branches: ["main", "dev-5"]
+    branches: ["main"]
   pull_request:
-    branches: ["main", "dev-5"]
+    branches: ["main"]
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
         run: npm install @lambdatest/smartui-storybook -g
 
 
-      - name: Give some time to start the Storybook server
+      - name: Give some time to start the  server
         run: |
           echo "Start sleeping..."
           sleep 30  # Sleep for 30 seconds
